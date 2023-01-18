@@ -4,10 +4,10 @@ import CharacterCard from '../Components/CharacterCard';
 import "../Styles/Home.css"
 
 
-function Homepage({characters}) {
+function Homepage({characters, setCharacters}) {
     return ( 
         <div>
-            <Search />
+            <Search setCharacters={setCharacters} />
             <h1>Main Characters</h1>
             <div className="characters-container">
 
