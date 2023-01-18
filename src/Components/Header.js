@@ -11,7 +11,7 @@ function Header() {
         <div className={darkMode ? "header-container header-dark" : "header-container"} >
             <a href='/'>Home</a>
             <Link to='/about'>About</Link>
-            <button onClick={()=> setDarkMode(!darkMode)}>{darkMode ? "LightMode" : "Dark Mode"} </button>
+            <button onClick={()=> setDarkMode(!darkMode)}>{darkMode ? "Light Mode" : "Dark Mode"} </button>
         </div> 
      );
 }
