@@ -7,6 +7,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Homepage from './Pages/Homepage'
 import axios from 'axios'
 import CharacterDetails from './Pages/CharacterDetails'
+import ThemeContextProvider from './Context/ThemeContext'
 
 function App() {
 
@@ -26,12 +27,19 @@ useEffect(() => {
   return (
     <div>
       <BrowserRouter>
-      <Header />
+
+      <ThemeContextProvider>
+
+        <Header />
+
         <Routes>
           <Route path='/About' element={<About/>} />
           <Route path='/' element={<Homepage characters={characters} setCharacters={setCharacters} />} />
           <Route path='/details/:characterId' element={<CharacterDetails/>} />
         </Routes>
+
+      </ThemeContextProvider>
+
       </BrowserRouter>
     </div>
   );
