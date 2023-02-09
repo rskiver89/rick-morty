@@ -1,9 +1,11 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import '../Styles/Characters.css'
+import { ThemeContext } from '../Context/ThemeContext'
 
 function CharacterDetails() {
+    const {darkMode, setDarkMode} = useContext(ThemeContext)
     const {characterId} = useParams()
     const [character, setCharacter] = useState('')
 
@@ -19,18 +21,20 @@ function CharacterDetails() {
     }, [])
 
   return (
-    <div className="details-container">
-        <img src={character?.image} alt=""/>
+    <div className={darkMode ? "details-background details-dark" : "details-background"}>
+      <div className="details-container">
+          <img src={character?.image} alt=""/>
+          
+          <div className="character-info">
+            <p>Name: <span>{character?.name}</span></p>
+            <p>Gender: <span>{character?.gender}</span></p>
+            <p>Location: <span>{character?.location?.name}</span></p>
+            <p>Species: <span>{character?.species}</span></p>
+            <p>Status: <span>{character?.status}</span></p>
+          
+        </div>
         
-        <div className="container-info">
-          <p>Name: <span>{character?.name}</span></p>
-          <p>Gender: {character?.gender}</p>
-          <p>Location: {character?.location?.name}</p>
-          <p>Species: {character?.species}</p>
-          <p>Status: {character?.status}</p>
-         
-       </div>
-      
+      </div>
     </div>
   )
 }

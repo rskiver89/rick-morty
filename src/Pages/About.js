@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import banner from '../Assets/banner.jpeg'
+import { ThemeContext } from '../Context/ThemeContext';
+import '../Styles/About.css'
 
 
 function About () {
+    const {darkMode, setDarkMode} = useContext(ThemeContext)
     return ( 
-        <div>
+        <div className={darkMode ? "about-container about-dark" : "about-container"}>
             <img style={{width:"100%"}} src={banner} alt=""/>
             <h1 style={{padding:"20px"}}>About</h1>
             <p style={{marginLeft:"20px"}}>Rick and Morty is an American adult animated science-fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network’s nighttime programming block Adult Swim. It is distributed internationally by Warner Bros. Domestic Television. The series follows the misadventures of cynical mad scientist Rick Sanchez and his good-hearted but fretful grandson Morty Smith, who split their time between domestic life and interdimensional adventures that take place across an infinite number of realities, often travelling to other planets and dimensions through portals and on Rick’s flying saucer. The general concept of Rick and Morty relies on two conflicting scenarios: domestic family drama, and an alcoholic grandfather dragging his grandson into high jinks.</p>
