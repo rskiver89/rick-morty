@@ -37,6 +37,59 @@
   .character-card:hover p {
     opacity: 1;
   }
+
+/* Details */
+
+.details-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c9a2d8;
+}
+
+.details-dark {
+  background-image: url('https://thumbs.gfycat.com/BriefIgnorantBlackbuck-size_restricted.gif');
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ff69b4;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.details-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff69b4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ff69b4;
+}
+
+.character-info p {
+  margin-bottom: 10px;
+}
+
+.character-info span {
+  font-weight: bold;
+  color: #000;
+}
+
   
   .character-card button {
     z-index: 1;

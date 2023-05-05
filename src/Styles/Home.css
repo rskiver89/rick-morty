@@ -1,9 +1,12 @@
+body {
+  background-color: #9e84a8;
+}
+
+
 .home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg"); */
-    background-repeat: repeat;
     color: #ff69b4;
     padding: 20px;
   }
