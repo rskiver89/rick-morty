@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.app-container {
+  cursor: url('./Assets/pngaaa.com-1232148.png'), auto;
+  font-family: "Comic Sans MS", cursive;
+}
+
 body {
   margin: 0;
 }
