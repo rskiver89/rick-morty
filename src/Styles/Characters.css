@@ -1,42 +1,53 @@
 .character-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    color: #ff69b4;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    position: relative;
-    margin: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .character-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .character-card:hover img {
-    filter: contrast(20%);
-  }
-  
-  .character-card p {
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .character-card:hover p {
-    opacity: 1;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #ff69b4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.character-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ff69b4;
+  width: 100%;
+  height: 100%;
+}
+
+.character-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.character-card:hover img {
+  filter: contrast(20%);
+}
+
+.character-card p {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.character-card:hover p {
+  opacity: 1;
+}
 
 /* Details */
 

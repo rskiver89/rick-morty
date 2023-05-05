@@ -18,8 +18,8 @@ function CharacterCard({ character }) {
     >
     <Link to={`/details/${character.id}`}>
         <img src={character.image} />
+              <p>{character.name}</p>
     </Link>
-      <p>{character.name}</p>
     </motion.div>
   );
 }
